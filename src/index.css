@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #080812;
+  color: #c6d0f5;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom cyber scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080812;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7b2fff, #00f5ff);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bf00ff;
+}
+
+/* Background Cyber Grid */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(165, 173, 206, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(165, 173, 206, 0.04) 1px, transparent 1px);
+}
+
+.cyber-grid-dense {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(139, 233, 253, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(139, 233, 253, 0.05) 1px, transparent 1px);
+}
+
+.glow-card {
+  position: relative;
+  background: rgba(13, 14, 26, 0.80);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(123, 47, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-card:hover {
+  border-color: rgba(123, 47, 255, 0.45);
+  box-shadow: 0 8px 32px -4px rgba(123, 47, 255, 0.2), inset 0 0 18px rgba(0, 245, 255, 0.04);
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(30, 30, 46, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav {
+  background: rgba(8, 8, 18, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(123, 47, 255, 0.2);
+}
+
+/* Text Gradients */
+.text-gradient-purple-cyan {
+  background: linear-gradient(135deg, #c6d0f5 0%, #bd93f9 50%, #8be9fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-pink-purple {
+  background: linear-gradient(135deg, #ff79c6 0%, #bd93f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan-blue {
+  background: linear-gradient(135deg, #8be9fd 0%, #8caaee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cyber Floating Orbs */
+@keyframes floatOrb1 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(35px, -30px, 0) scale(1.08); }
+}
+
+@keyframes floatOrb2 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-30px, 35px, 0) scale(1.1); }
+}
+
+.animate-float-orb-1 {
+  animation: floatOrb1 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-orb-2 {
+  animation: floatOrb2 15s ease-in-out infinite;
+  will-change: transform;
+}
