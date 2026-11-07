@@ -21,14 +21,14 @@ export const OmniaforeLogo: React.FC<LogoProps> = ({ className = '', size = 'md'
       <div className="relative flex items-center justify-center shrink-0">
         <div className={`relative ${iconSizeClass} flex items-center justify-center`}>
           <img
-            src="/logo-transparent.png"
+            src="./logo-transparent.png"
             alt="OMNIAFORE Symbol"
             className="w-full h-full object-contain filter drop-shadow-[0_0_10px_rgba(56,189,248,0.6)] group-hover:drop-shadow-[0_0_16px_rgba(168,85,247,0.8)] group-hover:scale-105 transition-all duration-300"
             onError={(e) => {
               // Fallback to logo.png or logo.jpg
               const target = e.currentTarget;
               if (target.src.includes('logo-transparent.png')) {
-                target.src = '/logo.png';
+                target.src = './logo.png';
               }
             }}
           />

@@ -38,13 +38,13 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices, onGetInTouch }) =
           <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center">
             <div className="absolute inset-0 bg-accent-cyan/20 rounded-full blur-xl animate-pulse" />
             <img
-              src="/logo-transparent.png"
+              src="./logo-transparent.png"
               alt="OMNIAFORE Emblem"
               className="w-full h-full object-contain filter drop-shadow-[0_0_14px_rgba(0,245,255,0.65)] drop-shadow-[0_0_26px_rgba(123,47,255,0.45)]"
               onError={(e) => {
                 const target = e.currentTarget;
                 if (target.src.includes('logo-transparent.png')) {
-                  target.src = '/logo.png';
+                  target.src = './logo.png';
                 }
               }}
             />
